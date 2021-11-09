@@ -83,8 +83,8 @@ namespace CreateKeyPair
                         sw.Close();
                     }
                     isSave = true;
+                    MessageBox.Show("Đã lưu file private key ở đường dẫn " + saveFile.FileName, "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show("Đã lưu file private key ở đường dẫn " + saveFile.FileName, "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch
@@ -115,8 +115,8 @@ namespace CreateKeyPair
                         sw.Close();
                     }
                     isSave = true;
+                    MessageBox.Show("Đã lưu file public key ở đường dẫn " + saveFile.FileName, "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                MessageBox.Show("Đã lưu file public key ở đường dẫn " + saveFile.FileName, "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
@@ -129,6 +129,11 @@ namespace CreateKeyPair
         private void btnContact_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.facebook.com/ledunguit");
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bước 1: Chọn độ lớn của key, có các lựa chọn 512 bit, 1024 bit và 2048 bit, số bit càng cao càng có độ bảo mật cao hơn, số bit càng thấp thì giải mã và mã hóa nhanh hơn!\nBước 2: Nhấn vào tạo cặp key.\nBước 3: Tiến hành lưu key thành file.pem và sử dụng!", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
